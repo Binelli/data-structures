@@ -66,6 +66,8 @@ void BinHeap::remove_max() {
     }
 
     swap(heap[0], heap[heap.size() - 1]);
+    heap.resize(heap.size() - 1);
+
     size_t idx = 0;
     while (idx < heap.size()) {
         size_t child = lchild_idx(idx);
